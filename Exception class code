@@ -1,17 +1,11 @@
-import java.util.Scanner;  
-  
-// create class InvalidAgeException by extending Exception class for create invalid age exception   
-class InvalidAgeException  extends Exception    
-{    
-    // parameterized constructor that accepts only detail message  
-    public InvalidAgeException (String message)    
+import java.util.*;    
+class InvalidAge  extends Exception    
+{     
+    public InvalidAge (String message)    
     {    
-        // calling parent Exception class constructor    
         super(message);    
     }    
-}    
-   
-// create CustomExceptionExample1 class that uses custom exception InvalidAgeException    
+}       
 public class CustomExceptionExample1    
 {    
   
