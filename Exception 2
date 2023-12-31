@@ -1,8 +1,8 @@
 class Main {
-  public static void divideByZero() {
+  public static void Throw() {
 
     // throw an exception
-    throw new ArithmeticException("Trying to divide by 0");
+    throw new ArithmeticException("divide by 0");
   }
 
   public static void main(String[] args) {
