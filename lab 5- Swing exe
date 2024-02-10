@@ -1,0 +1,46 @@
+package com.kamal;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TextFieldExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("TextField Example");
+        frame.setSize(300, 150);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeComponents(panel);
+
+        frame.setVisible(true);
+    }
+
+    private static void placeComponents(JPanel panel) {
+        panel.setLayout(null);
+
+        JLabel userLabel = new JLabel("Text:");
+        userLabel.setBounds(10, 20, 80, 25);
+        panel.add(userLabel);
+
+        JTextField textField = new JTextField(20);
+        textField.setBounds(100, 20, 165, 25);
+        panel.add(textField);
+
+        JButton button = new JButton("Display");
+        button.setBounds(100, 50, 80, 25);
+        panel.add(button);
+
+        JLabel displayLabel = new JLabel("");
+        displayLabel.setBounds(10, 80, 300, 25);
+        panel.add(displayLabel);
+
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String text = textField.getText();
+                displayLabel.setText("You entered: " + text);
+            }
+        });
+    }
+}
